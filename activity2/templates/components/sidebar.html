@@ -17,7 +17,7 @@
     
         <!-- Home -->
         <li class="item">
-            <a href="#" class="nav_link">
+            <a href="../" class="nav_link">
                 <span class="navlink_icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -33,7 +33,7 @@
     
         <!-- Report -->
         <li class="item">
-            <a href="#" class="nav_link">
+          <a href="{% url 'dashboard:report' %}" class="nav_link"> 
                 <span class="navlink_icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 3h18v18H3V3z"></path>
@@ -50,7 +50,7 @@
     
         <!-- Settings -->
         <li class="item">
-            <a href="#" class="nav_link">
+          <a href="{% url 'dashboard:settings' %}" class="nav_link"> 
                 <span class="navlink_icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="3"></circle>
