@@ -1,0 +1,83 @@
+{% load static %}  <!-- This must be the first line -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Sidebar</title>
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="menu_content">
+      <ul class="menu_items">
+        <div class="menu_title menu_dashboard"></div>
+    
+        <!-- Home -->
+        <li class="item">
+            <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </span>
+                <span class="navlink">Home</span>
+            </a>
+        </li>
+    
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+    
+        <!-- Report -->
+        <li class="item">
+            <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3h18v18H3V3z"></path>
+                        <path d="M8 8h8v8H8V8z"></path>
+                    </svg>
+                </span>
+                <span class="navlink">Report</span>
+            </a>
+        </li>
+
+    
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+    
+        <!-- Settings -->
+        <li class="item">
+            <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a2 2 0 0 1 0 4l-1.9.5a2 2 0 0 1-2.4-1.4l-.5-1.9a2 2 0 0 1 4 0"></path>
+                        <path d="M4.6 9a2 2 0 0 1 0-4L6.5 4a2 2 0 0 1 2.4 1.4l.5 1.9a2 2 0 0 1-4 0"></path>
+                    </svg>
+                </span>
+                <span class="navlink">Settings</span>
+            </a>
+        </li>
+    
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+    </ul>
+
+      <!-- Sidebar Open / Close -->
+      <div class="bottom_content">
+        <div class="bottom expand_sidebar">
+          <span> Expand</span>
+          <span>&#10149;</span>
+        </div>
+        <div class="bottom collapse_sidebar">
+          <span> Collapse</span>
+          <span>&#10148;</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>

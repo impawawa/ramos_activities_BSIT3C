@@ -1,0 +1,39 @@
+{% load static %}  <!-- This must be the first line -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    
+    <title>Navbar</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo_item">
+      <span id="sidebarOpen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </span>
+      <h1>J.P.D.R</h1>
+    </div>
+    <div class="navbar_content">
+      <span id="darkLight">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        </svg>
+      </span>
+      <img src="{% static 'img/me.png' %}" alt="Profile" class="profile" />
+    </div>
+  </nav>
+</body>
+</html>
