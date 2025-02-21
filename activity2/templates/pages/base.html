@@ -1,53 +1,57 @@
-{% load static %}  <!-- This must be the first line -->
+{% load static %}
+{% load custom_filters %}  <!-- Load your custom filter -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    
     <title>Dashboard</title>
 </head>
 <body>
-  <!-- Include Navbar -->
   {% include 'components/header.html' %}
-
-  <!-- Include Sidebar -->
   {% include 'components/sidebar.html' %}
 
-<!-- Main Content -->
-<main>
-  <section class="dashboard-overview">
-    <h2>Welcome to Your Dashboard</h2>
-    <p>Here's the data.</p>
+  <main>
+    <section class="dashboard-overview">
+      <h2>Welcome to Your Dashboard</h2>
+      <p>Here's the data.</p>
 
-    <div class="stats-container">
-      {% for item in data %}
-        <div class="stat-card">
-          <h3>{{ item.count }}</h3>
-          <p>{{ item.title }}</p>
-        </div>
-      {% endfor %}
-    </div>
-    
-  </section>
+      <div class="stats-container">
+        {% for item in data %}
+          <div class="stat-card">
+            <h3>
+              {% if item.title == "Revenue" %}
+                {{ item.count|format_currency }}  <!-- Apply custom filter -->
+              {% else %}
+                {{ item.count }}
+              {% endif %}
+            </h3>
+            <p>{{ item.title }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-  <section class="recent-activity">
-    <h2>Recent Data</h2>
-      {% for item in data %}
-    <ul>
-      <li><span>✔</span> {{item.title}} Count {{item.count}}</b>.</li>
-    </ul>
-    {% endfor %}
+    <section class="recent-activity">
+      <h2>Recent Data</h2>
+      <ul>
+        {% for item in data %}
+          <li>
+            <span>✔</span> 
+            {{ item.title }} Count 
+            {% if item.title == "Revenue" %}
+              {{ item.count|format_currency }}
+            {% else %}
+              {{ item.count }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
 
-  </section>
-</main>
-
-
-  <!-- JavaScript -->
   <script src="{% static 'javascript/main.js' %}"></script>
-
 </body>
 </html>
