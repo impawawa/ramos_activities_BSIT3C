@@ -20,7 +20,7 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('portfolio/', include(('portfolio.urls', 'portfolio'), namespace="portfolio")), 
+    path('', include(('portfolio.urls', 'portfolio'), namespace="portfolio")), 
     path('', lambda request: redirect('portfolio/', permanent=True)),  # Redirect root to portfolio
 ]
 
