@@ -1,0 +1,29 @@
+HIRAM: Hassle-free Instant Ride Access Management
+
+A car rental system manage by Zanber where in they will provide the Cars available and user will just browse available cars and book.
+Simple CRUD Operation 
+
+Create - Add new car (Only Admin will be allowed to add new car since Zanber will be the one who will manage the system)
+Read - Display Available Cars
+Update - (Only Admin allowed to update car details)
+Delete - (Only Admin allowed to delete cars)
+
+
+1. List All Cars
+Method: GET
+
+URL: /api/cars/
+
+Request Headers: None (if you removed authentication)
+
+Sample Response:
+[
+  {
+    "id": 1,
+    "name": "Toyota Vios",
+    "brand": "Toyota",
+    "model_year": 2022,
+    "is_available": true,
+    "daily_rate": 2000.00
+  }
+]
